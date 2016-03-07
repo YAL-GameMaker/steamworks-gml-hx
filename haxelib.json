@@ -1,0 +1,11 @@
+{
+	"name": "GMS-SteamNet",
+	"url": "http://yal.cc",
+	"license": "",
+	"tags": ["gamemaker", "gml"],
+	"description": "",
+	"version": "1.0.0",
+	"releasenote": "",
+	"contributors": ["YellowAfterlife"],
+	"dependencies": {}
+}
