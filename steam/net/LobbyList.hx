@@ -10,12 +10,14 @@ extern class LobbyList {
 	static function request():Void;
 	@:native("is_loading") static function isLoading():Bool;
 	//
-	@:native("add_string_filder")
+	@:native("add_string_filter")
 	static function addStringFilter(key:String, value:String, cmp:Int):Void;
-	@:native("add_numerical_filder")
+	@:native("add_numerical_filter")
 	static function addNumericalFilter(key:String, value:Int, cmp:Int):Void;
-	@:native("add_near_filder")
+	@:native("add_near_filter")
 	static function addNearFilter(key:String, value:Int, cmp:Int):Void;
+	@:native("add_distance_filter")
+	static function addDistanceFilter(kind:Int):Void;
 	//
 	@:native("get_count") static function getCount():Int;
 	@:native("get_data") static function getData(index:Int, key:String):String;

@@ -13,4 +13,9 @@ abstract SteamID(Array<Int>) {
 	//
 	private inline function get_high() return this[0];
 	private inline function get_low() return this[1];
+	//
+	public static var defValue(get, never):SteamID;
+	private static inline function get_defValue():SteamID {
+		return new SteamID(0, 0);
+	}
 }
