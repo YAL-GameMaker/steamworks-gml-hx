@@ -15,6 +15,8 @@ extern class Lobby {
 	//
 	@:native("set_data") static function setData(key:String, value:String):Bool;
 	@:native("set_type") static function setType(type:Int):Bool;
+	//
+	@:native("activate_invite_overlay") static function showInviteOverlay():Bool;
 }
 
 extern class LobbyType {
