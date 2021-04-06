@@ -4,17 +4,21 @@ package steam.net;
  * ...
  * @author YellowAfterlife
  */
-@:native("steam_lobby")
+@:native("steam_lobby") @:snakeCase
 extern class Lobby {
 	static function leave():Bool;
 	static function create(type:Int, limit:Int):Bool;
 	@:native("join_id") static function join(id:SteamID):Void;
 	//
-	@:native("is_owner") static function isOwner():Bool;
+	static function isOwner():Bool;
 	@:native("get_owner_id") static function getOwner():SteamID;
 	//
-	@:native("set_data") static function setData(key:String, value:String):Bool;
-	@:native("set_type") static function setType(type:Int):Bool;
+	static function getMemberCount():Int;
+	@:native("get_member_id") static function getMember(ind:Int):SteamID;
+	//
+	static function getData(key:String):String;
+	static function setData(key:String, value:String):Bool;
+	static function setType(type:Int):Bool;
 	//
 	@:native("activate_invite_overlay") static function showInviteOverlay():Bool;
 }
