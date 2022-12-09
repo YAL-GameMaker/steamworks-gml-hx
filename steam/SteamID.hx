@@ -19,6 +19,9 @@ abstract SteamID(Int64) from Int64 to Int64 {
 	public inline function new(hi:Int, lo:Int) {
 		this = Int64.make(hi, lo);
 	}
+	public static inline function ofInt64(i64:Int64):SteamID {
+		return i64;
+	}
 	//
 	public static var defValue:SteamID = cast 0;
 	public inline function toString():String {
@@ -34,6 +37,9 @@ abstract SteamID(Array<Int>) {
 	}
 	@:extern public static inline function create(high:Int, low:Int) {
 		return SfTools.raw("steam_id_create")(high, low);
+	}
+	public static inline function ofInt64(i64:Int64):SteamID {
+		return new SteamID(i64.high, i64.low);
 	}
 	//
 	private inline function get_high() return this[0];
